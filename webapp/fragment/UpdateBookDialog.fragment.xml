@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" 
+   >
+   <Dialog
+      id="updateDialog"
+      title="{i18n>updateBook}"
+      contentWidth="30rem">
+      <content>
+        <Label text="ISBN"/>
+		<Input id="isbn" maxLength="10"/>
+		<Label text="{i18n>title}"/>
+		<Input id="title"/>
+		<Label text="{i18n>author}"/>
+		<Input id="author"/>
+		<Label text="{i18n>published}"/>
+		<DateTimePicker id="publishedDate" displayFormat="short" valueFormat="yyyy-MM-ddTHH:mm" change="handleChange" class="sapUiSmallMarginBottom"/>
+		<Label text="{i18n>total}"/>
+		<Input id="totalBooks"/>
+		<Label text="{i18n>available}"/>
+		<Input id="availableBooks" />
+		<Label/>
+        <Button
+            text="{i18n>updateBookButton}"
+            press=".onUpdateBook"/>
+        <Button
+            text="{i18n>close}"
+            press=".onUpdateDialogClose"/>
+        </content>
+   </Dialog>
+</core:FragmentDefinition>
